@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>USMEE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO"/>
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive"/>
+    <meta name="author" content="FREEHTML5.CO"/>
+
+    <!--
+      //////////////////////////////////////////////////////
+
+      FREE HTML5 TEMPLATE
+      DESIGNED & DEVELOPED by FREEHTML5.CO
+
+      Website: 		http://freehtml5.co/
+      Email: 			info@freehtml5.co
+      Twitter: 		http://twitter.com/fh5co
+      Facebook: 		https://www.facebook.com/fh5co
+
+      //////////////////////////////////////////////////////
+       -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="css/superfish.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .about {
+            position: fixed;
+            z-index: 10;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            transition: all 0.2s ease;
+        }
+
+        .about .bg_links {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+            backdrop-filter: blur(5px);
+            position: absolute;
+        }
+
+        .about .logo {
+            width: 40px;
+            height: 40px;
+            z-index: 9;
+            background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: 10px 7px;
+            opacity: 0.9;
+            transition: all 1s 0.2s ease;
+            bottom: 0;
+            right: 0;
+        }
+
+        .about .social {
+            opacity: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .about .social .icon {
+            width: 100%;
+            height: 100%;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+            display: flex;
+            transition: all 0.2s ease, background-color 0.4s ease;
+            opacity: 0;
+            border-radius: 100%;
+        }
+
+        .about .social.portfolio {
+            transition: all 0.8s ease;
+        }
+
+        .about .social.portfolio .icon {
+            background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);
+        }
+
+        .about .social.dribbble {
+            transition: all 0.3s ease;
+        }
+
+        .about .social.dribbble .icon {
+            background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);
+        }
+
+        .about .social.linkedin {
+            transition: all 0.8s ease;
+        }
+
+        .about .social.linkedin .icon {
+            background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);
+        }
+
+        .about:hover {
+            width: 105px;
+            height: 105px;
+            transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+        }
+
+        .about:hover .logo {
+            opacity: 1;
+            transition: all 0.6s ease;
+        }
+
+        .about:hover .social {
+            opacity: 1;
+        }
+
+        .about:hover .social .icon {
+            opacity: 0.9;
+        }
+
+        .about:hover .social:hover {
+            background-size: 28px;
+        }
+
+        .about:hover .social:hover .icon {
+            background-size: 65%;
+            opacity: 1;
+        }
+
+        .about:hover .social.portfolio {
+            right: 0;
+            bottom: calc(100% - 40px);
+            transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+        }
+
+        .about:hover .social.portfolio .icon:hover {
+            background-color: #698fb7;
+        }
+
+        .about:hover .social.dribbble {
+            bottom: 45%;
+            right: 45%;
+            transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+        }
+
+        .about:hover .social.dribbble .icon:hover {
+            background-color: #ea4c89;
+        }
+
+        .about:hover .social.linkedin {
+            bottom: 0;
+            right: calc(100% - 40px);
+            transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+        }
+
+        .about:hover .social.linkedin .icon:hover {
+            background-color: #0077b5;
+        }
+
+        .wrapper {
+            width: 100vw;
+            margin: 0 auto;
+            height: 400px;
+            background-color: #161616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width: 767px) {
+            .wrapper {
+                height: 700px;
+            }
+        }
+
+        .content {
+            max-width: 1024px;
+            width: 100%;
+            padding: 0 4%;
+            padding-top: 250px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .content {
+                padding-top: 300px;
+                flex-direction: column;
+            }
+        }
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+            min-width: 200px;
+            height: 250px;
+            background-color: #000000;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+            border: 2px solid rgba(7, 7, 7, 0.12);
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .icon {
+            margin: 0 auto;
+            width: 100%;
+            height: 80px;
+            max-width: 80px;
+            background: linear-gradient(90deg, #ff7e7e 0%, #ff4848 40%, rgba(0, 0, 0, 0.28) 60%);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all 0.8s ease;
+            background-position: 0px;
+            background-size: 200px;
+        }
+
+        .material-icons.md-18 {
+            font-size: 18px;
+        }
+
+        .material-icons.md-24 {
+            font-size: 24px;
+        }
+
+        .material-icons.md-36 {
+            font-size: 36px;
+        }
+
+        .material-icons.md-48 {
+            font-size: 48px;
+        }
+
+        .card .title {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .card .text {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-weight: 200;
+            letter-spacing: 2px;
+            opacity: 0;
+            max-height: 0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            height: 270px;
+        }
+
+        .card:hover .info {
+            height: 90%;
+        }
+
+        .card:hover .text {
+            transition: all 0.3s ease;
+            opacity: 1;
+            max-height: 40px;
+        }
+
+        .card:hover .icon {
+            background-position: -120px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .icon i {
+            background: linear-gradient(90deg, #ff7e7e, #ff4848);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+    </style>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+<body>
+<div id="fh5co-wrapper">
+    <div id="fh5co-page">
+        <div id="fh5co-header">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                        <h1 id="fh5co-logo" style="font-family: 'Fira Sans', sans-serif;"><a href="index.html">USMEE</a></h1>
+                        <!-- START #fh5co-menu-wrap -->
+                        <nav id="fh5co-menu-wrap" role="navigation">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                <li><a chref="index.html">HOME</a></li>
+                                <li><a href="product.html">PRODUCT</a></li>
+                                <li><a href="service.html">SERVICE</a></li>
+                                <li><a href="wholesale.html">WHOLESALE</a></li>
+                                <li><a lass="active" href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- end:fh5co-header -->
+        <aside id="fh5co-hero" class="js-fullheight">
+            <div class="flexslider js-fullheight">
+                <ul class="slides">
+                    <li style="background-image: url(images/slide_3.jpg);">
+                        <div class="overlay-gradient"></div>
+                        <div class="container">
+                            <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                                <div class="slider-text-inner desc">
+                                    <h2 class="heading-section">Contact Us</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <div class="content" style="padding: 250px 0 250px 0;">
+            <div class="col-md-12" style="text-align: center">
+                <h3 style="color: black">Want to work with us?</h3>
+                <p>Your project is very important to us.</p>
+            </div>
+            <!-- card -->
+            <a href="https://wa.me/message/ALLDLXFKG3JUK1" class="card">
+                <div class="icon"><span class="iconify" data-icon="mdi-whatsapp" data-inline="false"
+                                        style="font-size: 40px"></span></div>
+                <p class="title">Whats App</p>
+                <p class="text">CONTACT</p>
+            </a>
+            <!-- end card -->
+            <!-- card -->
+            <a href="https://instagram.com/usmeekr?r=nametag" class="card">
+
+                <div class="icon"><span class="iconify" data-icon="cib:instagram" data-inline="false"
+                                        style="font-size: 40px"></span></div>
+                <p class="title">INSTAGRAM</p>
+                <p class="text">CONTACT</p>
+
+            </a>
+            <!-- end card -->
+        </div>
+    </div>
+
+
+    <!-- END map -->
+
+
+    <!-- END fh5co-contact -->
+</div>
+<style>
+    .b {
+        display: block;
+        border-top: 1px solid gray;
+        padding-top: 60px;
+        margin-top: 60px;
+    }
+
+    .th {
+        border-style: solid;
+        border-width: 0.1px;
+    }
+
+    .tg td {
+        border-style: solid;
+        border-width: 0.1px;
+        font-family: Arial, sans-serif;
+        font-size: 0.2em;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+    }
+
+    .tg th {
+        border-style: solid;
+        border-width: 0.1px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-family: Arial, sans-serif;
+        font-size: 0.2em;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+    }
+
+    .tg .tg-yjaj {
+        text-align: center;
+        vertical-align: top
+    }
+
+    .tg .tg-wp8o {
+        text-align: center;
+        vertical-align: top
+    }
+
+    .tg .tg-jbyd {
+        ctext-align: center;
+        vertical-align: top
+    }
+
+    .tg .tg-0pky {
+        text-align: left;
+        vertical-align: top
+    }
+</style>
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="section-title">About Us</h3>
+                    <p style="margin: 0">Our vision is super and firm. Strong trust through communication, general trade takes it
+                        one step further, producing the result of perfection. We are a better partner than ever
+                        before, allowing you to succeed in whatever you want. the latest useful trade, goods,
+                        and fashion information, faster, and more clearly and lively than ever before. The
+                        delivers vividly through the Usmee Channel. UsMee Korea, which has everything, is
+                        literally a complete trade company.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h3 class="section-title">Our Address</h3>
+                    <ul class="contact-info">
+                        <li><i class="icon-map2"></i>20, Yeonseo-ro 37ga-gil, Eunpyeong-gu, Seoul, Republic of
+                            Korea // (주)유즈미코리아 | 주소: 서울특별시 은평구 연서로37가길 20(불광등)
+                        </li>
+                        <li><i class="icon-whatsapp"></i><a href="https://wa.me/message/ALLDLXFKG3JUK1">Whats
+                            App (Click)</a></li>
+                        <li><i class="icon-instagram"></i><a href="https://instagram.com/usmeekr?r=nametag">Instagram
+                            (Click)</a></li>
+                        <li><i class="icon-weixin"></i><a
+                                href="https://cafe.naver.com/common/storyphoto/viewer.html?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDA3MjJfMjkw%2FMDAxNTk1Mzg1NzI2MjE3.nSvVRNtKT-IVfuL3TOVQHtvX52bBW8Cas489oDsuXbYg.TsC3Xhv9_spPY8fJJv4alcMzHUM_dK6sd8NzA-fQDCAg.JPEG%2Fw.jpg">Wechat
+                            (Click)</a></li>
+                        <li><i class="icon-envelope2"></i>usmik-korea@naver.com</li>
+                        <li><i class="icon-globe2"></i><a href="#">www.usmee.co.kr</a></li>
+                        <li><i class="icon-globe2"></i><a href="#">www.system.co.kr</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h3 class="section-title">Wholesale Center</h3>
+                    <ul class="contact-info">
+                        <li><i class="icon-table"></i><a href="#">USMEE WHOLESALE <br>DB CENTER</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="section-title">Wholesale Price</h3>
+                    <table class="tg">
+                        <thead>
+                        <tr>
+                            <th class="tg-wp8o"><span style="font-weight:700;font-style:normal">BRAND</span>
+                            </th>
+                            <th class="tg-wp8o" colspan="3"><span style="font-weight:700;font-style:normal">BASE ON WHOLE SALE PRICE</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tg-wp8o" rowspan="2"><span
+                                    style="font-weight:700">KOREAN COSMETIC </span><br><span
+                                    style="font-weight:700">BRAND</span><br><span style="font-weight:700">(COSRX, </span><br><span
+                                    style="font-weight:700">LANEIGE, </span><br><span style="font-weight:700">SULHWASOO, </span><br><span
+                                    style="font-weight:700">SOME BY ME,</span><br><span style="font-weight:700">DALBA,</span><br><span
+                                    style="font-weight:700">and etc)</span></td>
+                            <td class="tg-wp8o"><span style="font-weight:700">Under KRW 2.000.000</span></td>
+                            <td class="tg-yjaj"><span style="font-weight:700;font-style:normal">Over KRW 2.000.000</span>
+                            </td>
+                            <td class="tg-wp8o"><span style="font-weight:700;font-style:normal">OVER KRW 5.000.000</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-jbyd"><span
+                                    style="font-weight:400;font-style:normal">contact us</span></td>
+                            <td class="tg-yjaj"><span
+                                    style="font-weight:inherit;font-style:normal">contact us</span><br><span
+                                    style="font-weight:inherit;font-style:normal">(up to 60 % per brand)</span>
+                            </td>
+                            <td class="tg-wp8o"><span
+                                    style="font-weight:inherit;font-style:normal">contact us</span><br><span
+                                    style="font-weight:inherit;font-style:normal">(up to 65% per brand)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky" colspan="4"><span style="font-weight:700">KOREAN COSMETIC BRAND - Supplying Rate 40 - 65%</span><br><br><span
+                                    style="font-weight:700;color:#FE0000">Supplying rate</span><br><span
+                                    style="font-weight:inherit;font-style:normal">Supplying rate may change at the time of placing order due to brand's policy or order amount.</span><br><br><span
+                                    style="font-weight:700;color:#FE0000">Wholesale Price </span><br><span
+                                    style="font-weight:inherit;font-style:normal">is the price applied for customers who order at Usmee.</span><br><span
+                                    style="font-weight:inherit;font-style:normal">The wholesale price </span><span
+                                    style="font-weight:700">does not include shipping fee and import tax.</span><br><br><span
+                                    style="font-weight:700;color:#FE0000">Rate</span><span
+                                    style="font-weight:700"> </span><br><span
+                                    style="font-weight:inherit;font-style:normal">is the supplying rate. For example, wholesale price at Usmee would be 10,000 x 60% = KRW 6,000. </span><br><br><span
+                                    style="font-weight:700;color:#FE0000">Retail Price</span><span
+                                    style="font-weight:700"> </span><br><span
+                                    style="font-weight:inherit;font-style:normal">is the official retail price at physical stores and official websites of brands.</span><br><br><span
+                                    style="font-weight:700;color:#FE0000">Quantity </span><br><span
+                                    style="font-weight:inherit;font-style:normal">is box quantity of each product . Order quantity must be as per box quantity. Smaller order quantity should contact Usmee in advance.</span><br><span
+                                    style="font-weight:700">How to search</span><br><span
+                                    style="font-weight:inherit;font-style:inherit">: type the keyword of the product name to Usmee's contact channel ; what's app &amp; wechat &amp; email.</span><br><span
+                                    style="font-weight:700">How to order:</span><br><span
+                                    style="font-weight:700"> </span><span
+                                    style="font-weight:inherit;font-style:inherit">mail to Usmee including the product detail that you order</span><br><span
+                                    style="font-weight:700">If the quotation is not up to the date or missing product you want, please contact us for more information at </span><br><span
+                                    style="font-weight:700">usmik-korea@naver.com</span><br><span
+                                    style="font-weight:700">We only delivery 100% genuine and fresh products directly from the brand.</span><br><br>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--							<h3 class="section-title">Drop us a line</h3>-->
+                    <!--							<form class="contact-form">-->
+                    <!--								<div class="form-group">-->
+                    <!--									<label for="name" class="sr-only">Name</label>-->
+                    <!--									<input type="name" class="form-control" id="name" placeholder="Name">-->
+                    <!--								</div>-->
+                    <!--								<div class="form-group">-->
+                    <!--									<label for="email" class="sr-only">Email</label>-->
+                    <!--									<input type="email" class="form-control" id="email" placeholder="Email">-->
+                    <!--								</div>-->
+                    <!--								<div class="form-group">-->
+                    <!--									<label for="message" class="sr-only">Message</label>-->
+                    <!--									<textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>-->
+                    <!--								</div>-->
+                    <!--								<div class="form-group">-->
+                    <!--									<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">-->
+                    <!--								</div>-->
+                    <!--							</form>-->
+                </div>
+            </div>
+            <div class="row copy-right">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <p class="fh5co-social-icons">
+                        <a href="https://wa.me/message/ALLDLXFKG3JUK1"><i class="icon-whatsapp"></i></a>
+                        <a href="https://instagram.com/usmeekr?r=nametag"><i class="icon-instagram"></i></a>
+                        <a href="http://www.usmee.co.kr"><i class="icon-globe2"></i></a>
+                        <a href="#"><i class="icon-table"></i></a>
+                    </p>
+                    <p>(주)유즈미코리아 | 주소: 서울특별시 은평구 연서로37가길 20(불광등) <br> 사업자등록번호: 114-19-74292 <br>대표: 김범수 CMO /
+                        이성현 CFO / 강효정 CCO |
+                        © 2020 공정거래위원회 &</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</div>
+<!-- END fh5co-page -->
+
+</div>
+<!-- END fh5co-wrapper -->
+
+<!-- jQuery -->
+
+
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Superfish -->
+<script src="js/hoverIntent.js"></script>
+<script src="js/superfish.js"></script>
+<!-- Flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+<script src="js/google_map.js"></script>
+
+<!-- Main JS (Do not remove) -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
